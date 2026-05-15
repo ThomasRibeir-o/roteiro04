@@ -19,7 +19,7 @@ public class MusicManager {
     public boolean remove(Music m){
         return musics.remove(m);
     }
-    
+                                                                                                                                                                         
     public boolean remove(String tittle){
         for(Music m: musics){
             if(m.getTitle() == null ? tittle == null : m.getTitle().equals(tittle)){
@@ -30,9 +30,9 @@ public class MusicManager {
         return false;
     }
     
-    public Music search(String tittle){
+    public Music search(String title){
         for(Music m: musics){
-            if(m.getTitle() == null ? tittle == null : m.getTitle().equals(tittle)){
+            if(m.getTitle() == null ? title == null : m.getTitle().equals(title)){
                 return m;
             }
         }

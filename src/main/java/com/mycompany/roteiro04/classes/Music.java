@@ -1,4 +1,4 @@
-package Classes;
+package com.mycompany.roteiro04.classes;
 
 import java.util.Objects;
 

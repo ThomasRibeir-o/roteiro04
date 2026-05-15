@@ -10,14 +10,14 @@ public class Album {
     private String release;
     private String musicGenre;
     private String recordLabel;
-    private MusicManager musicsInAblbum;
+    private MusicManager musicsInAlbum;
 
-    public Album(String title, String release, String musicGenre, String recordLabel, MusicManager musicsInAblbum) {
+    public Album(String title, String release, String musicGenre, String recordLabel, MusicManager musicsInAlbum) {
         this.title = title;
         this.release = release;
         this.musicGenre = musicGenre;
         this.recordLabel = recordLabel;
-        this.musicsInAblbum = musicsInAblbum;
+        this.musicsInAlbum = musicsInAlbum;
     }
 
     public Album() {
@@ -25,14 +25,42 @@ public class Album {
         this.release = "";
         this.musicGenre = "";
         this.recordLabel = "";
-        //this.musicsInAblbum = musicsInAblbum;
+        this.musicsInAlbum = new MusicManager();
     }
-
     
+    public void add(Music m){
+        musicsInAlbum.add(m);
+    }
+    
+    public boolean remove(Music m){
+        return musicsInAlbum.remove(m);
+    }
+    
+    public boolean remove(String title){
+        return remove(title);
+    }
+    
+    public Music search(String title){
+        for(Music m: musics){
+            if(m.getTitle() == null ? title == null : m.getTitle().equals(title)){
+                return m;
+            }
+        }
+        return null;
+    }
+    
+    public Music search(Music music){
+        for(Music m: musics){
+            if(m.equals(music)){
+                return m;
+            }
+        }
+        return null;
+    }
     
     @Override
     public String toString() {
-        return "Album{" + "title=" + title + ", release=" + release + ", musicGenre=" + musicGenre + ", recordLabel=" + recordLabel + ", musicsInAblbum=" + musicsInAblbum + '}';
+        return "Album{" + "title=" + title + ", release=" + release + ", musicGenre=" + musicGenre + ", recordLabel=" + recordLabel + ", musicsInAlbum=" + musicsInAlbum + '}';
     }
     
     @Override
@@ -66,7 +94,7 @@ public class Album {
         if (!Objects.equals(this.recordLabel, other.recordLabel)) {
             return false;
         }
-        return Objects.equals(this.musicsInAblbum, other.musicsInAblbum);
+        return Objects.equals(this.musicsInAlbum, other.musicsInAlbum);
     }
     
     public String getTitle() {
@@ -101,12 +129,12 @@ public class Album {
         this.recordLabel = recordLabel;
     }
 
-    public MusicManager getMusicsInAblbum() {
-        return musicsInAblbum;
+    public MusicManager getMusicsInAlbum() {
+        return musicsInAlbum;
     }
 
-    public void setMusicsInAblbum(MusicManager musicsInAblbum) {
-        this.musicsInAblbum = musicsInAblbum;
+    public void setMusicsInAlbum(MusicManager musicsInAlbum) {
+        this.musicsInAlbum = musicsInAlbum;
     }
     
     

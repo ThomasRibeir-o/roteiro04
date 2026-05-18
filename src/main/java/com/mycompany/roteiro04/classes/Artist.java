@@ -86,6 +86,11 @@ public class Artist {
         return Objects.equals(this.artistAlbums, other.artistAlbums);
     }
 
+        @Override
+    public String toString() {
+        return "Artist{" + "name=" + name + ", artistCountry=" + artistCountry + ", date=" + date + ", biography=" + biography + ", artistAlbums=" + artistAlbums + '}';
+    }
+    
     public String getName() {
         return name;
     }
@@ -125,13 +130,5 @@ public class Artist {
     public void setArtistAlbums(AlbumManager artistAlbums) {
         this.artistAlbums = artistAlbums;
     }
-
-    @Override
-    public String toString() {
-        return "Artist{" + "name=" + name + ", artistCountry=" + artistCountry + ", date=" + date + ", biography=" + biography + ", artistAlbums=" + artistAlbums + '}';
-    }
-    
-    
-    
     
 }

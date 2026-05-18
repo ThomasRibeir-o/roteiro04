@@ -37,25 +37,15 @@ public class Album {
     }
     
     public boolean remove(String title){
-        return remove(title);
+        return musicsInAlbum.remove(title);
     }
     
     public Music search(String title){
-        for(Music m: musics){
-            if(m.getTitle() == null ? title == null : m.getTitle().equals(title)){
-                return m;
-            }
-        }
-        return null;
+        return musicsInAlbum.search(title);
     }
     
     public Music search(Music music){
-        for(Music m: musics){
-            if(m.equals(music)){
-                return m;
-            }
-        }
-        return null;
+        return musicsInAlbum.search(music);
     }
     
     @Override

@@ -28,53 +28,141 @@ public class FrCadMusic extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel3 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jPanel4 = new javax.swing.JPanel();
+        musicTitleLbl = new javax.swing.JLabel();
+        edtTitle = new javax.swing.JTextField();
+        musicDurationLbl = new javax.swing.JLabel();
+        edtDuration = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
         titleLbl = new javax.swing.JLabel();
+        btnPan = new javax.swing.JPanel();
         newBtn = new javax.swing.JButton();
         editBtn = new javax.swing.JButton();
+        cancelBtn = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Music Registration");
+        setBackground(new java.awt.Color(11, 45, 51));
 
-        titleLbl.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel3.setBackground(new java.awt.Color(11, 45, 51));
+
+        jPanel1.setBackground(new java.awt.Color(11, 45, 51));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        musicTitleLbl.setText("Title:");
+        jPanel4.add(musicTitleLbl);
+
+        edtTitle.addActionListener(this::edtTitleActionPerformed);
+        jPanel4.add(edtTitle);
+
+        musicDurationLbl.setText("Duration:");
+        jPanel4.add(musicDurationLbl);
+
+        edtDuration.addActionListener(this::edtDurationActionPerformed);
+        jPanel4.add(edtDuration);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1)
+                .addGap(102, 102, 102))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(65, 65, 65)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jPanel2.setBackground(new java.awt.Color(11, 45, 51));
+
+        titleLbl.setBackground(new java.awt.Color(11, 45, 51));
         titleLbl.setFont(new java.awt.Font("Yu Gothic", 1, 36)); // NOI18N
-        titleLbl.setForeground(new java.awt.Color(0, 234, 0));
+        titleLbl.setForeground(new java.awt.Color(0, 71, 170));
         titleLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         titleLbl.setText("Music Registration");
+        jPanel2.add(titleLbl);
+
+        btnPan.setBackground(new java.awt.Color(11, 45, 51));
+        btnPan.setForeground(new java.awt.Color(0, 71, 170));
+        btnPan.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.CENTER, 50, 25));
 
         newBtn.setText("New");
+        btnPan.add(newBtn);
 
         editBtn.setText("Edit");
+        btnPan.add(editBtn);
+
+        cancelBtn.setBackground(new java.awt.Color(0, 71, 170));
+        cancelBtn.setText("Cancel");
+        btnPan.add(cancelBtn);
+
+        jButton2.setText("Remove");
+        btnPan.add(jButton2);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addGap(0, 66, Short.MAX_VALUE)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(32, 32, 32)
+                .addComponent(btnPan, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
-                        .addComponent(newBtn)
-                        .addGap(18, 18, 18)
-                        .addComponent(editBtn)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(titleLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 829, Short.MAX_VALUE)
-                        .addContainerGap())))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(titleLbl, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(newBtn)
-                    .addComponent(editBtn))
-                .addContainerGap(404, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void edtTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtTitleActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_edtTitleActionPerformed
+
+    private void edtDurationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_edtDurationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_edtDurationActionPerformed
 
     /**
      * @param args the command line arguments
@@ -102,7 +190,20 @@ public class FrCadMusic extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel btnPan;
+    private javax.swing.JButton cancelBtn;
     private javax.swing.JButton editBtn;
+    private javax.swing.JTextField edtDuration;
+    private javax.swing.JTextField edtTitle;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel musicDurationLbl;
+    private javax.swing.JLabel musicTitleLbl;
     private javax.swing.JButton newBtn;
     private javax.swing.JLabel titleLbl;
     // End of variables declaration//GEN-END:variables
